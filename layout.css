@@ -1,0 +1,155 @@
+
+header, main, footer{
+display: block;	
+}
+body{
+	background: url(images/background.png)no-repeat 100% 100%;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	}
+/**************nav****************/
+nav{
+	background-color:rgba(255,0,255,0.3);
+	padding:10px;
+}
+nav ul{/*tagets all the lists*/
+	list-style: none;
+	margin-top:0;
+	padding: 0;
+}
+
+nav > ul > li{/*targets only top level list*/
+	position: relative;
+	display: inline-block;
+}
+
+nav ul li a{
+	display: block;
+	color: #fff;
+	padding: 10px;
+	text-decoration: none;
+	width: 200px;
+}
+
+nav ul li:hover{
+	background: rgba(255,0,0,0.3);
+	
+	}
+
+nav ul ul{/*any menu we will hide*/
+	display: none;
+	position: absolute;
+	top: 100%;
+	background: rgba(81,80,80,0.7);
+	}
+
+nav ul li:hover > ul{
+	display: block;/*shows the dropdown- the > makes sure only the child
+	ul of li being hovered is targeted - rather than all the sebmenus*/
+	
+}
+/************image**************/
+main{
+   
+	margin-top: 8%;
+	margin-left: 2%;
+	margin-bottom: 9%;
+	float: left;
+	width: 526px;
+	height: 375px;
+	overflow: hidden;
+
+}
+#banner img{
+	float: left;
+}
+#banner{
+	position: relative;
+	width: 2630px;
+	animation: slidingBanner 8s ease infinite;
+	-webkit-animation: slidingBanner 8s ease infinite;
+}
+
+@keyframes slidingBanner{
+	0% {left: 0;}
+    20% {left: 0;}
+	25% {left: -526px;}
+	45% {left: -526px;}
+	50% {left: -1052px;}
+	70% {left: -1052px;}
+	75% {left: -1578px;}
+	95% {left: -1578px;}
+	100% {left: -2104px;}
+	
+}
+@-webkit-keyframes slidingBanner{
+	0% {left: 0;}
+    20% {left: 0;}
+	25% {left: -526px;}
+	45% {left: -526px;}
+	50% {left: -1052px;}
+	70% {left: -1052px;}
+	75% {left: -1578px;}
+	95% {left: -1578px;}
+	100% {left: -2104px;}
+	
+}
+
+aside{
+	margin-left: 45%;
+	margin-top: 8%;
+	margin-right: 4%;
+	padding: 4px;
+	border-left: 1px solid #fff;
+	font-size: 1em;
+	color: white;
+}
+aside img{
+	float: right;
+}
+
+#tmta{
+	
+	width: 526px;
+	height: 375px;
+	overflow: hidden;
+}
+
+#tmta img{
+	transition: all 1s;
+	-webkit-animation: all 1s;
+}
+
+#tmta img:hover{
+	transform: translateX(-526px);
+	-webkit-transform: transformX(-526px);
+	-ms-transform:transformX(-526px);
+}
+
+footer {
+	clear: both;
+	color: white;
+	text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 900px){
+	nav > ul > li{display: block; width: 175px;}
+	nav ul ul{
+	display: none; 
+	position: absolute; 
+	top: 0;
+	left: 125px; 
+	background: rgba(81,80,80,0.7);
+	}
+	
+    
+    aside{
+        margin-left: 2%;
+		padding-left: 2%;
+        border-style: none;
+        
+    }
+}
